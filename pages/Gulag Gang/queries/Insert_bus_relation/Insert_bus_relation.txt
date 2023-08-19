@@ -1,0 +1,12 @@
+WITH inserted_bus AS (
+  INSERT INTO public.businesses ("bus_name")
+  VALUES ('{{input_BusName.text}}')
+  RETURNING bus_id
+)
+INSERT INTO public.businessroles ("bus_id", "member_id", "role")
+VALUES ((
+    SELECT bus_id FROM inserted_bus
+  ),
+  '{{input_BusStateID.text}}',
+  '{{input_BusRole.text}}'
+);

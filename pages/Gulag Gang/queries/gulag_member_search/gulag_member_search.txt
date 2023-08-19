@@ -1,0 +1,6 @@
+SELECT *
+FROM public.gulag_members
+WHERE 
+   (CASE WHEN '{{radio_gulagSearch.selectedOptionValue}}' = 'state_id' THEN state_id
+         WHEN '{{radio_gulagSearch.selectedOptionValue}}' = 'full_name' THEN full_name
+    END) = '{{input_gulagSearch.text}}';

@@ -1,0 +1,10 @@
+SELECT
+  *
+FROM
+  public.members
+ORDER BY
+  "{{gulag_tbl_business.sortOrder.column || 'state_id'}}" {{members_tbl_page.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{members_tbl_page.pageSize}}
+OFFSET
+  {{Table1.pageOffset}}

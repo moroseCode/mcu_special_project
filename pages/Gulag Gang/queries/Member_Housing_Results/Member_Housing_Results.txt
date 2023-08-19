@@ -1,0 +1,5 @@
+SELECT h.property_name, hr.role
+FROM public.gulag_members m
+LEFT JOIN public.housingrelationship hr ON m.state_id = CAST(hr.member_state_id AS VARCHAR)
+LEFT JOIN public.housing h ON hr.housing_id = h.housing_id
+WHERE m.state_id = '{{result_ID.text}}';

@@ -1,0 +1,5 @@
+SELECT b.bus_name, br.role
+FROM public.gulag_members m
+LEFT JOIN public.businessroles br ON m.state_id = CAST(br.member_id AS VARCHAR)
+LEFT JOIN public.businesses b ON br.bus_id = b.bus_id
+WHERE m.state_id = '{{result_ID.text}}';

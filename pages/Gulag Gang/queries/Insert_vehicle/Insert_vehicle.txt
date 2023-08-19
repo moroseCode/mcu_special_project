@@ -1,0 +1,6 @@
+INSERT INTO public.vehicles ("member_state_id", "model", "license_plate")
+VALUES (
+    '{{input_VehicleStateID.text}}',
+    '{{input_VehicleType.text}}',
+    '{{input_Plates.text}}'
+);

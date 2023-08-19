@@ -1,0 +1,8 @@
+--SELECT column_name, data_type, character_maximum_length, numeric_precision,
+       --numeric_scale, is_nullable, column_default
+--FROM information_schema.columns
+
+SELECT constraint_name, string_agg(column_name, ', ') AS columns
+FROM information_schema.key_column_usage
+WHERE table_name = 'housingrelationship' AND table_schema = 'public' AND constraint_name LIKE '%_pkey'
+GROUP BY constraint_name;

@@ -1,0 +1,1 @@
+UPDATE public.members SET "first_name"= '{{gulag_tbl_business.updatedRow.first_name}}', "last_name"= '{{gulag_tbl_business.updatedRow.last_name}}', "mugshot_url"= '{{Table1.updatedRow.mugshot_url}}', "dna_on_file"= '{{Table1.updatedRow.dna_on_file}}' WHERE "state_id"= {{Table1.updatedRow.state_id}};

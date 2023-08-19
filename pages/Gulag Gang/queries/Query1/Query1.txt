@@ -1,0 +1,11 @@
+SELECT * FROM public.vehicles LIMIT 10;
+--DELETE FROM public.housing WHERE public.housing.housing_id = 12
+--DELETE FROM public.housingrelationship WHERE public.housingrelationship.housing_id = 12;
+--ALTER TABLE public.memberbusinessroles
+--RENAME COLUMN business_id TO bus_id;
+--DROP TABLE public.memberbusinessroles;
+--ALTER TABLE public.housing ADD CONSTRAINT unique_housing_name UNIQUE (property_name);
+--SELECT column_name, data_type, column_default
+--FROM information_schema.columns
+--WHERE table_name = 'gulag_members' AND table_schema = 'public';
+

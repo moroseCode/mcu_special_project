@@ -1,0 +1,4 @@
+SELECT v.model, v.license_plate
+FROM public.gulag_members m
+LEFT JOIN public.vehicles v ON m.state_id = CAST(v.member_state_id AS VARCHAR)
+WHERE m.state_id = '{{result_ID.text}}';

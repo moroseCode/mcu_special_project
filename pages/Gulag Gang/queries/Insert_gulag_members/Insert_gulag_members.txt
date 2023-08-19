@@ -1,0 +1,8 @@
+INSERT INTO public.gulag_members ("state_id", "full_name", "nickname", "mugshot_url", "dna_on_file")
+VALUES (
+    '{{input_stateID.text}}',
+    '{{input_fullName.text}}',
+    '{{input_nickname.text.}}',
+    '{{input_mugshot.text}}',
+    {{input_dna.selectedOptionValue}}
+);

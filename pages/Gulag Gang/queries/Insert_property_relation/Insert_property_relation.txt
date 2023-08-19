@@ -1,0 +1,12 @@
+WITH inserted_housing AS (
+  INSERT INTO public.housing ("property_name")
+  VALUES ('{{input_housingName.text}}')
+  RETURNING housing_id
+)
+INSERT INTO public.housingrelationship ("housing_id", "member_state_id", "role")
+VALUES ((
+    SELECT housing_id FROM inserted_housing
+  ),
+  '{{input_housingStateID.text}}',
+  '{{pick_housingRole.selectedOptionValue}}'
+);

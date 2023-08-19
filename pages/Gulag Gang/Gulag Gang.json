@@ -1,0 +1,76 @@
+{
+  "unpublishedPage": {
+    "name": "Gulag Gang",
+    "slug": "gulag-gang",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 650,
+          "containerStyle": "none",
+          "snapRows": 60,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 83,
+          "minHeight": 620,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Gulag Gang_Member_Business_Results",
+              "name": "Member_Business_Results",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "result_ID.text"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Gulag Gang_Member_Housing_Results",
+              "name": "Member_Housing_Results",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "result_ID.text"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Gulag Gang_Member_Vehicle_Results",
+              "name": "Member_Vehicle_Results",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "result_ID.text"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Gulag Gang",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "64daec3b170ee870cfee2eb7_64dafa340c90753f8da61288"
+}
