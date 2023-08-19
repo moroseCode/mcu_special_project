@@ -6,19 +6,17 @@
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.e6911f8bb94dc6c4a102a74740c41763.svg",
     "topRow": 40,
     "isSortable": false,
-    "onPageChange": "{{\n            Select_public_members1.run();\n            Total_record_public_members1.run();\n          }}",
+    "onPageChange": "{{Select_public_members1.run();}}",
     "type": "TABLE_WIDGET_V2",
     "inlineEditingSaveOption": "ROW_LEVEL",
-    "animateLoading": false,
+    "animateLoading": true,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"},
         {"key": "boxShadow"},
         {"key": "tableData"},
-        {"key": "totalRecordsCount"},
         {"key": "primaryColumns.bus_name.computedValue"},
-        {"key": "primaryColumns.role.computedValue"},
-        {"key": "isVisible"}
+        {"key": "primaryColumns.role.computedValue"}
     ],
     "needsHeightForContent": true,
     "leftColumn": 0,
@@ -27,10 +25,10 @@
     "showInlineEditingOptionDropdown": true,
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "isVisibleFilters": false,
-    "isVisible": "{{btn_gulagSearch.onClick === 'Visible'}}",
+    "isVisible": true,
     "enableClientSideSearch": true,
     "version": 2,
-    "totalRecordsCount": "{{Total_record_public_members1.data[0].count}}",
+    "totalRecordsCount": "",
     "tags": [
         "Suggested",
         "Display"
@@ -71,7 +69,7 @@
         "bus_name",
         "role"
     ],
-    "dynamicPropertyPathList": [{"key": "isVisible"}],
+    "dynamicPropertyPathList": [],
     "displayName": "Table",
     "bottomRow": 65,
     "columnWidthMap": {"bus_name": 193},

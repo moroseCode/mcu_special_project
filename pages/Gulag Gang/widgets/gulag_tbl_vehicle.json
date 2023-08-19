@@ -6,7 +6,7 @@
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.e6911f8bb94dc6c4a102a74740c41763.svg",
     "topRow": 40,
     "isSortable": false,
-    "onPageChange": "{{\n            Select_public_members1.run();\n            Total_record_public_members1.run();\n          }}",
+    "onPageChange": "{{Member_Vehicle_Results.run();}}",
     "type": "TABLE_WIDGET_V2",
     "inlineEditingSaveOption": "ROW_LEVEL",
     "animateLoading": true,
@@ -15,7 +15,6 @@
         {"key": "borderRadius"},
         {"key": "boxShadow"},
         {"key": "tableData"},
-        {"key": "totalRecordsCount"},
         {"key": "primaryColumns.model.computedValue"},
         {"key": "primaryColumns.license_plate.computedValue"}
     ],
@@ -26,10 +25,10 @@
     "showInlineEditingOptionDropdown": true,
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "isVisibleFilters": false,
-    "isVisible": false,
+    "isVisible": true,
     "enableClientSideSearch": true,
     "version": 2,
-    "totalRecordsCount": "{{Total_record_public_members1.data[0].count}}",
+    "totalRecordsCount": "",
     "tags": [
         "Suggested",
         "Display"

@@ -3,7 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 14,
     "widgetName": "btn_gulagSearch",
-    "onClick": "{{gulag_member_search.run();\nstoreValue(gulag_tbl_business.isVisible, 'TRUE');}}",
+    "onClick": "{{gulag_member_search.run().then(() => {\n  Member_Business_Results.run();\n  Member_Housing_Results.run();\n  Member_Vehicle_Results.run();\n}).catch(() => {\n  postWindowMessage('Member not found', \"window\", \"*\");\n});}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "displayName": "Button",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",
